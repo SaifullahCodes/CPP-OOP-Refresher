@@ -1,10 +1,7 @@
 # 🚀 C++ OOP & Engineering Fundamentals
 
-### 👋 Hi, I'm Saifullah Naseer!
-**Computer Science Graduate | Android & AI Engineer** I am a results-driven Computer Science graduate from **IST**, specializing in **Native Android Development** and **Generative AI** integrations. While my core expertise lies in Java/Kotlin and Python, I maintain this repository to sharpen my low-level engineering skills, focus on memory management, and prepare for technical interviews.
-
 ### 🎯 Objective
-To demonstrate mastery of **Object-Oriented Programming (OOP)**, **Memory Management**, and **Data Structures** using C++ — the backbone of high-performance computing and Android NDK.
+This repository is dedicated to mastering **Object-Oriented Programming (OOP)**, **Memory Management**, and **Data Structures** using C++. As an **Android & AI Engineer**, my goal is to sharpen low-level engineering skills and understand how memory works under the hood (essential for NDK & Performance Optimization).
 
 ---
 
@@ -21,7 +18,7 @@ This repository is structured into modular engineering concepts:
 
 ---
 
-## 🛠️ Tech Stack for This Repo
+## 🛠️ Tech Stack
 <p align="left">
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
   <img src="https://img.shields.io/badge/GCC-Compiler-000000?style=for-the-badge&logo=gnu-bash&logoColor=white" />
@@ -31,10 +28,10 @@ This repository is structured into modular engineering concepts:
 
 ---
 
-### 📫 Connect with me
-I am **Open to Work** and actively seeking opportunities in **Android Development** & **AI Engineering**.
+### 👨‍💻 Author
+**Saifullah Naseer**
+*Computer Science Graduate | Android & AI Engineer*
 
 <p align="left">
-<a href="mailto:saifullah.naseer.dev@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-<a href="https://www.linkedin.com/in/saifullahnaseerdev"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/saifullahnaseerdev"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
