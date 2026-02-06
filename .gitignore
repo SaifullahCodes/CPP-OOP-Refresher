@@ -1,0 +1,10 @@
+# Ignore Executable files (Windows)
+*.exe
+*.dll
+*.obj
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Executable files (Linux/Mac)
+*.out
