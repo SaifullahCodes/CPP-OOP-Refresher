@@ -1,50 +1,40 @@
-# 🚀 C++ OOP Refresher & Bank Management System
+# 🚀 C++ OOP & Engineering Fundamentals
 
-Welcome to my C++ repository! 
-Here, I am revisiting core **Computer Science concepts** and implementing them in practical projects. This repository documents my journey from basic C++ syntax to advanced OOP concepts like Inheritance, Polymorphism, and Memory Management.
+### 👋 Hi, I'm Saifullah Naseer!
+**Computer Science Graduate | Android & AI Engineer** I am a results-driven Computer Science graduate from **IST**, specializing in **Native Android Development** and **Generative AI** integrations. While my core expertise lies in Java/Kotlin and Python, I maintain this repository to sharpen my low-level engineering skills, focus on memory management, and prepare for technical interviews.
 
----
-
-## 📂 Project: Simple Bank System
-**Location:** `01 classes/BankingSystem.cpp`
-
-A console-based banking application designed to practice **Encapsulation** and **Class Design**.
-
-### ✨ Features
-* **Secure Transactions:** Prevents unauthorized withdrawals using PIN verification.
-* **Auto-Account Number:** Uses `static` variables to automatically generate unique Account IDs (e.g., 101, 102).
-* **Data Validation:** Ensures no negative deposits or overdrafts are possible.
-* **Safe Cleanup:** Implements `Destructor` (~BankAccount) to simulate secure session closing.
-
-### 🛠️ Key Concepts Used
-1.  **Classes & Objects:** Blueprints for Account creation.
-2.  **Access Modifiers:** `private` for sensitive data (PIN, Balance), `public` for user actions.
-3.  **Constructors:** Parameterized constructors with `this` pointer for initializing data.
-4.  **Destructors:** To handle object lifecycle end-points.
+### 🎯 Objective
+To demonstrate mastery of **Object-Oriented Programming (OOP)**, **Memory Management**, and **Data Structures** using C++ — the backbone of high-performance computing and Android NDK.
 
 ---
 
-## 🚀 How to Run Code
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/YourUsername/CPP-OOP-Refresher.git](https://github.com/YourUsername/CPP-OOP-Refresher.git)
-    ```
-2.  **Compile the code:**
-    ```bash
-    g++ BankingSystem.cpp -o bankapp
-    ```
-3.  **Run the application:**
-    ```bash
-    ./bankapp
-    ```
+## 📂 Repository Architecture
+
+This repository is structured into modular engineering concepts:
+
+| Module | Project | Status | Engineering Concepts Applied |
+| :--- | :--- | :--- | :--- |
+| **01_classes** | Bank Management System | ✅ Completed | Encapsulation, Static State Management, Object Lifecycle (Constructors/Destructors). |
+| **02_inheritance** | *Coming Soon* | ⏳ Pending | Code Reusability, Access Hierarchies (Protected/Private). |
+| **03_polymorphism** | *Coming Soon* | ⏳ Pending | Dynamic Binding, Virtual Functions, Abstract Classes. |
+| **04_pointers** | *Coming Soon* | ⏳ Pending | Heap Memory, Manual Allocation (`new`/`delete`), Memory Leak Prevention. |
 
 ---
 
-## 🔜 Roadmap (Upcoming Learning)
-* [x] **Basics & Classes** (Completed)
-* [ ] **Inheritance** (Creating Savings vs Current Accounts)
-* [ ] **Polymorphism** (Overriding functions)
-* [ ] **Pointers & Memory Management** (Deep Dive)
+## 🛠️ Tech Stack for This Repo
+<p align="left">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/GCC-Compiler-000000?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+</p>
 
 ---
-*Developed by a CS Final Year Student.*
+
+### 📫 Connect with me
+I am **Open to Work** and actively seeking opportunities in **Android Development** & **AI Engineering**.
+
+<p align="left">
+<a href="mailto:saifullah.naseer.dev@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/saifullahnaseerdev"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+</p>
