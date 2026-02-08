@@ -7,14 +7,34 @@ This repository is dedicated to mastering **Object-Oriented Programming (OOP)**,
 
 ## 📂 Repository Architecture
 
-This repository is structured into modular engineering concepts:
+This repository is structured into modular engineering concepts. The status reflects my current progress.
 
 | Module | Project | Status | Engineering Concepts Applied |
 | :--- | :--- | :--- | :--- |
-| **01_classes** | Bank Management System | ✅ Completed | Encapsulation, Static State Management, Object Lifecycle (Constructors/Destructors). |
-| **02_inheritance** | *Coming Soon* | ⏳ Pending | Code Reusability, Access Hierarchies (Protected/Private). |
-| **03_polymorphism** | *Coming Soon* | ⏳ Pending | Dynamic Binding, Virtual Functions, Abstract Classes. |
-| **04_pointers** | *Coming Soon* | ⏳ Pending | Heap Memory, Manual Allocation (`new`/`delete`), Memory Leak Prevention. |
+| **01_classes** | Bank Management System | ✅ Completed | Encapsulation, Static State Management, Object Lifecycle (Constructors). |
+| **02_inheritance** | Smart Autonomous Fleet | ✅ Completed | Single & Multiple Inheritance, Diamond Problem Solution (`virtual` inheritance), Access Modifiers. |
+| **03_polymorphism** | Commando Survival Mission | ✅ Completed | Abstract Classes, Pure Virtual Functions, Dependency Injection (Passing objects via pointers). |
+| **04_memory_mgmt** | Electric Car Simulation | ✅ Completed | **Deep Copy vs Shallow Copy**, Heap Memory (`new`/`delete`), Virtual Destructors, Memory Leak Prevention. |
+
+---
+
+## 🏆 Featured Projects
+
+### 1. 🚘 Smart Autonomous Fleet System (Tesla Style)
+**Focus:** *Memory Management & Polymorphism*
+A simulation of a futuristic vehicle rental system.
+* **Technical Highlights:**
+    * Implemented **Deep Copy Constructor** to handle dynamic battery arrays on the Heap.
+    * Used **Virtual Destructors** to prevent memory leaks during polymorphic deletion.
+    * Solved **Diamond Problem** using Virtual Inheritance.
+
+### 2. 🎖️ Commando Survival Mission
+**Focus:** *Abstraction & Inter-Object Communication*
+A survival game engine where items affect the player's state.
+* **Technical Highlights:**
+    * **Dependency Injection:** Passed the `Commando` object pointer into `GameItem` classes to modify state dynamically.
+    * **Abstract Base Class:** Created a strict contract for all game items (`Medkit`, `Poison`, `SuperSerum`) using Pure Virtual Functions.
+    * **Runtime Polymorphism:** Stored different item types in a single `GameItem*` array and executed logic dynamically.
 
 ---
 
