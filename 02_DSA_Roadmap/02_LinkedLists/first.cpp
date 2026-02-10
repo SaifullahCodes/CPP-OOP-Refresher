@@ -43,6 +43,43 @@ public:
         }
         temp->next = newNode;
     }
+    void insetatPosition(int pos, int value)
+    {
+        if (pos == 0)
+        {
+            Node *newNode = new Node(value);
+            newNode->next = head;
+            head = newNode;
+            return;
+        }
+        Node *temp = head;
+        int count = 0;
+        while (temp != 0)
+        {
+            temp = temp->next;
+            count++;
+        }
+
+        if (pos <= count)
+        {
+            Node *temp2 = head;
+            for (int i; i < pos - 1; i++)
+            {
+
+                temp2 = temp2->next;
+            }
+            Node *newNode = new Node(value);
+            newNode->next = temp2->next; // Right side joro
+            temp2->next = newNode;       // Left side joro
+
+            cout << "Node Inserted!" << endl;
+        }
+        else
+        {
+            cout << "Invalid Position!" << endl;
+        }
+    }
+
     void display()
     {
         Node *temp = head;
@@ -55,6 +92,7 @@ public:
         cout << "NULL" << endl;
     }
 };
+
 int main()
 {
     LinkedList list;
@@ -64,6 +102,9 @@ int main()
     list.insetAtEnd(200);
     list.insetAtEnd(100);
     list.display();
+    list.insetatPosition(4, 150);
+    list.display();
+
     // Node *n1=new Node(3);
     // Node *n2 =new Node(4);
     // n1->next=n2;
