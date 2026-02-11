@@ -137,6 +137,7 @@ public:
 
 int main()
 {
+
     LinkedList list;
     list.insertAtStart(10);
     list.insertAtStart(20);
@@ -147,6 +148,8 @@ int main()
     list.insetatPosition(4, 150);
     list.display();
     list.deleteStart();
+    list.display();
+    list.deleteEnd();
     list.display();
     list.deleteEnd();
     list.display();
