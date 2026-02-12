@@ -3,164 +3,141 @@ using namespace std;
 class Node
 {
 public:
-    Node *next;
     int data;
-    Node(int data)
+    Node *next;
+    Node(int value)
     {
+        data = value;
         next = NULL;
-        this->data = data;
     }
 };
 class LinkedList
 {
-    Node *head;
-
 public:
+    Node *head;
     LinkedList()
     {
-        head = 0;
+        head = NULL;
     }
     void insertAtStart(int value)
     {
         Node *newNode = new Node(value);
         newNode->next = head;
         head = newNode;
+        cout << "Node added at start " << endl;
     }
-    void insetAtEnd(int Value)
+    void insertAtEnd(int value)
     {
-        Node *newNode = new Node(Value);
-        Node *temp = head;
-        if (head == 0)
+        Node *newNode = new Node(value);
+
+        if (head == NULL)
         {
             head = newNode;
         }
         else
         {
-            while (temp->next != 0)
+            Node *temp = head;
+            while (temp->next != NULL)
             {
                 temp = temp->next;
             }
+            temp->next = newNode;
+            cout << "Node added at end " << endl;
         }
-        temp->next = newNode;
     }
-    void insetatPosition(int pos, int value)
+    void insertAtPosition(int pos, int value)
     {
+        Node *newNode = new Node(value);
+
         if (pos == 0)
         {
-            Node *newNode = new Node(value);
             newNode->next = head;
             head = newNode;
             return;
         }
+
         Node *temp = head;
-        int count = 0;
-        while (temp != 0)
+        int index = 0;
+
+        while (temp != NULL && index < pos - 1)
         {
             temp = temp->next;
-            count++;
+            index++;
         }
 
-        if (pos <= count)
+        if (temp == NULL)
         {
-            Node *temp2 = head;
-            for (int i; i < pos - 1; i++)
-            {
-
-                temp2 = temp2->next;
-            }
-            Node *newNode = new Node(value);
-            newNode->next = temp2->next; // Right side joro
-            temp2->next = newNode;       // Left side joro
-
-            cout << "Node Inserted!" << endl;
+            cout << "Position is out of bound" << endl;
+            delete newNode;
+            return;
         }
-        else
-        {
-            cout << "Invalid Position!" << endl;
-        }
+
+        newNode->next = temp->next;
+        temp->next = newNode;
+
+        cout << "Node added at position " << pos << endl;
     }
-
-    void deleteStart()
+    void deleteFirstNode()
     {
         if (head == NULL)
         {
-            cout << "List is empty, nothing to delete!" << endl;
+            cout << "List is empty!" << endl;
             return;
         }
         Node *temp = head;
         head = head->next;
         delete temp;
-        cout << "Node deleted from start " << endl;
     }
-    void deleteEnd()
+    void deleteAtEnd()
     {
         if (head == NULL)
         {
-            cout << "List is empty, nothing to delete!" << endl;
+            cout << "List is empty" << endl;
             return;
         }
-        if (head->next == 0)
+        if (head->next == NULL)
         {
             Node *temp = head;
-            head = 0;
+            head = NULL;
             delete temp;
-            cout << "Node deleted from end " << endl;
+            cout << "Last Node Deleted (List is now empty)" << endl;
             return;
         }
-
-        else
-        {
-            Node *temp2 = head;
-            while (temp2->next->next != 0)
-            {
-                temp2 = temp2->next;
-            }
-            Node *lastNode = temp2->next; // Target ko pakro
-            temp2->next = NULL;           // Connection kato (Ab temp2 aakhri ban gaya)
-            delete lastNode;              // Target ko uda do
-
-            cout << "Deleted node from end!" << endl;
-        }
-    }
-    void display()
-    {
         Node *temp = head;
-
-        while (temp != NULL)
+        while (temp->next->next != NULL)
         {
-            cout << temp->data << " -> ";
             temp = temp->next;
         }
-        cout << "NULL" << endl;
+        Node *newNode = temp->next;
+        temp->next = NULL;
+        delete newNode;
+        cout << "Node deleted at end" << endl;
+    }
+    void DisplayList()
+    {
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data;
+            if (temp->next != NULL)
+                cout << " -> ";
+            temp = temp->next;
+        }
+        cout << endl;
     }
 };
-
 int main()
 {
-
     LinkedList list;
-    list.insertAtStart(10);
     list.insertAtStart(20);
-    list.insetAtEnd(100);
-    list.insetAtEnd(200);
-    list.insetAtEnd(100);
-    list.display();
-    list.insetatPosition(4, 150);
-    list.display();
-    list.deleteStart();
-    list.display();
-    list.deleteEnd();
-    list.display();
-    list.deleteEnd();
-    list.display();
-
-    // Node *n1=new Node(3);
-    // Node *n2 =new Node(4);
-    // n1->next=n2;
-    // Node *temp = n1;
-    // while(temp!=0){
-    //     cout<<temp->data<<endl;
-    //     temp=temp->next;
-    // }
+    list.insertAtStart(10);
+    list.insertAtEnd(30);
+    list.insertAtEnd(40);
+    list.DisplayList();
+    cout << endl;
+    list.insertAtPosition(2, 5);
+    list.deleteFirstNode();
+    list.deleteAtEnd();
+    list.DisplayList();
     return 0;
 }
