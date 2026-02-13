@@ -128,7 +128,39 @@ public:
         cout<<"Node deleted"<<endl;
 
     }
-    void deleteposition()
+    void deleteposition(int pos ){
+        if(pos == 0){
+            Node * temp = head;
+            head = head->next;
+            delete temp;
+            cout<<"Node deleted"<<endl;
+            return;
+        }
+        int count=1;
+        Node * temp = head;
+        while(temp!=NULL){
+            temp=temp->next;
+            count++;
+        }
+        if(pos<=count){
+            Node * temp2 = head;
+            for(int i = 0 ; i < pos-1; i++){
+                if(temp2==NULL){
+                    cout<<"Invalid position"<<endl;
+                    return;
+                }
+                temp2=temp2->next;
+            }
+            Node * prevNode = temp2->next;
+            temp2->next= prevNode->next;
+            delete prevNode;
+            cout<<"Node deleted at"<<pos<<endl;
+        }
+        else{
+            cout<<"Invalid positiomn"<<endl;
+        }
+
+    }
 
         // --- Display ---
         void displayList()
@@ -144,6 +176,26 @@ public:
             temp = temp->next;
         }
         cout << endl;
+    }
+    Node* reverseList(Node* head) {
+    Node *prev = NULL;      // 1. Pichle node ka record
+    Node *current = head;   // 2. Wo banda jiska connection torta hai
+    Node *next = NULL;      // 3. Agle bande ko bachane wala (taaky list gum na ho)
+
+    while(current != NULL) {
+        next = current->next;  // Rasta save karo (Agay kon khara hai?)
+        current->next = prev;  // CONNECTION ULTA KARO (Piche hath pakro)
+        prev = current;        // Ab pichle ko ek kadam agay lao
+        current = next;        // Ab mojooda bande ko ek kadam agay lao
+    }
+    return prev; // Sab khatam honay par 'prev' naya Head ban jayega
+}
+    void displayReverse(Node* temp) {
+        if (temp == NULL) return; // Base Case: Aakhir mein puhanch gaye
+
+        displayReverse(temp->next); // Aglay node ko call karo (Pehle aakhir tak jao)
+        
+        cout << temp->data << " ";  // Wapsi (backtracking) par print karo
     }
 }; // <--- Ye Semicolon BOHT Zaroori hai!
 
@@ -168,9 +220,19 @@ int main()
 
     cout << "After Position Insert: ";
     list.displayList(); // Output: 1 -> 5 -> 99 -> 10 -> 20
-    list .deleteFirst();
+    // list .deleteFirst();
+    // list.displayList();
+    // list.deleteEnd();
+    // list.displayList();
+    list.deleteposition(4);
     list.displayList();
-    list.deleteEnd();
+    // Ghalat:
+    // list.reverseList(list.head); 
+    
+    // Sahi:
+    // list.head = list.reverseList(list.head); // Naya head update karo
+    // cout << "List after permanent reverse: ";
+    list.displayReverse(list.head);
     list.displayList();
 
 
